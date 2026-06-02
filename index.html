@@ -9,7 +9,6 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 html{scroll-behavior:smooth}
 
 body{
@@ -17,7 +16,7 @@ body{
     font-family:'Montserrat',sans-serif;
     color:#f7f2ea;
     background-image:
-        linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.62) 44%,rgba(0,0,0,.22) 100%),
+        linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.62),rgba(0,0,0,.22)),
         url('CHARRY0422.jpg');
     background-size:cover;
     background-position:center;
@@ -51,20 +50,9 @@ body{
     text-decoration:none;
 }
 
-.toolbar a:hover,
-.toolbar button:hover{
-    background:rgba(255,255,255,.22);
-}
+.page{max-width:1180px;margin:auto}
 
-.page{
-    max-width:1180px;
-    margin:auto;
-}
-
-.header{
-    margin-bottom:42px;
-    max-width:740px;
-}
+.header{margin-bottom:42px;max-width:740px}
 
 .label{
     font-size:11px;
@@ -174,13 +162,8 @@ h1{
     padding-top:34px;
 }
 
-.cards-row.current{
-    grid-template-columns:repeat(4,1fr);
-}
-
-.cards-row.projected{
-    grid-template-columns:repeat(5,1fr);
-}
+.cards-row.current{grid-template-columns:repeat(4,1fr)}
+.cards-row.projected{grid-template-columns:repeat(6,1fr)}
 
 .cards-row::before{
     content:"";
@@ -244,8 +227,8 @@ ul{
 }
 
 li{
-    font-size:10.5px;
-    line-height:1.35;
+    font-size:10px;
+    line-height:1.33;
     color:#4d4740;
     margin-bottom:6px;
 }
@@ -297,13 +280,35 @@ li::before{
     line-height:1.7;
 }
 
-[contenteditable]{
-    outline:none;
-    border-radius:4px;
+[contenteditable]{outline:none;border-radius:4px}
+[contenteditable]:focus{background:rgba(180,122,53,.16)}
+
+@media(max-width:1280px){
+    .cards-row.projected{grid-template-columns:repeat(3,1fr)}
 }
 
-[contenteditable]:focus{
-    background:rgba(180,122,53,.16);
+@media(max-width:1100px){
+    .cards-row.current,
+    .cards-row.projected{grid-template-columns:repeat(2,1fr)}
+
+    .impact{grid-template-columns:1fr}
+
+    .section-title{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .section-title p{text-align:left}
+    h1{font-size:42px}
+}
+
+@media(max-width:620px){
+    body{padding:22px}
+
+    .cards-row.current,
+    .cards-row.projected{grid-template-columns:1fr}
+
+    .top-card{width:100%}
 }
 
 @media print{
@@ -315,52 +320,8 @@ li::before{
         print-color-adjust:exact;
     }
 
-    .toolbar{
-        display:none;
-    }
-
-    .section{
-        break-inside:avoid;
-    }
-}
-
-@media(max-width:1100px){
-    .cards-row.current,
-    .cards-row.projected{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .impact{
-        grid-template-columns:1fr;
-    }
-
-    .section-title{
-        align-items:flex-start;
-        flex-direction:column;
-    }
-
-    .section-title p{
-        text-align:left;
-    }
-
-    h1{
-        font-size:42px;
-    }
-}
-
-@media(max-width:620px){
-    body{
-        padding:22px;
-    }
-
-    .cards-row.current,
-    .cards-row.projected{
-        grid-template-columns:1fr;
-    }
-
-    .top-card{
-        width:100%;
-    }
+    .toolbar{display:none}
+    .section{break-inside:avoid}
 }
 </style>
 </head>
@@ -390,7 +351,7 @@ li::before{
             <h2 contenteditable>Cenário Atual</h2>
         </div>
         <p contenteditable>
-            Estrutura enxuta, com alta concentração de atividades estratégicas, operacionais e analíticas na gestão. O time atual sustenta o crescimento, mas opera com sobreposição de funções.
+            Estrutura enxuta, com alta concentração de atividades estratégicas, operacionais e analíticas na gestão.
         </p>
     </div>
 
@@ -509,26 +470,6 @@ li::before{
 
         </div>
     </section>
-
-    <div class="impact">
-        <div class="impact-card">
-            <span contenteditable>Capacidade atual</span>
-            <strong contenteditable>R$ 6,8 MM</strong>
-            <p class="subtitle" contenteditable>Projeção estimada 2026</p>
-        </div>
-
-        <div class="impact-card">
-            <span contenteditable>Principal gargalo</span>
-            <strong contenteditable>Gestão sobrecarregada</strong>
-            <p class="subtitle" contenteditable>Estratégico e operacional centralizados</p>
-        </div>
-
-        <div class="impact-card">
-            <span contenteditable>Risco</span>
-            <strong contenteditable>Perda de escala</strong>
-            <p class="subtitle" contenteditable>Limite de execução com estrutura atual</p>
-        </div>
-    </div>
 </section>
 
 <section id="cenario-projetado" class="section">
@@ -550,6 +491,32 @@ li::before{
         </div>
 
         <div class="cards-row projected">
+
+            <div class="card management">
+                <div class="role" contenteditable>Letícia</div>
+                <div class="name" contenteditable>Head de E-commerce</div>
+                <div class="dept" contenteditable>Estratégia, Crescimento e Gestão do Canal</div>
+                <span class="badge alert" contenteditable>Foco estratégico</span>
+                <ul>
+                    <li>Estratégico e gestão</li>
+                    <li>Ensinar</li>
+                    <li>Material performance</li>
+                    <li>DRE - consultoria</li>
+                    <li>Calendário</li>
+                    <li>Gerenciamento do Trello</li>
+                    <li>Reuniões semanais MKT | Comitê | Mídia</li>
+                    <li>Reuniões semanais CDX</li>
+                    <li>Programação de pagamentos + envio de NFs</li>
+                    <li>Liberação de peça para o e-commerce</li>
+                    <li>Aprovações diárias</li>
+                    <li>Compra de brinde / novos designs de embalagem</li>
+                    <li>Compra de crédito - disparos</li>
+                    <li>Revisão de comentários e atendimentos</li>
+                    <li>Feedback semanal</li>
+                    <li>Alinhamento de tarefas diário</li>
+                    <li>Alinhamento de ações a cada ação/lançamento</li>
+                </ul>
+            </div>
 
             <div class="card crm">
                 <div class="role" contenteditable>Analista de CRM</div>
@@ -666,9 +633,9 @@ li::before{
     <div class="note" contenteditable>
         Resumo executivo: a proposta não é apenas aumentar equipe, mas reorganizar responsabilidades para liberar a gestão para estratégia, ampliar a capacidade de CRM e vendas ativas, reduzir gargalos operacionais e sustentar o crescimento projetado para 2027.
     </div>
+
 </section>
 
 </main>
-
 </body>
 </html>
