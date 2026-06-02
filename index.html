@@ -8,299 +8,359 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+    min-height:100vh;
+    font-family:'Montserrat',sans-serif;
+    color:#f7f2ea;
+    background-image:
+        linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.62) 44%,rgba(0,0,0,.22) 100%),
+        url('CHARRY0422.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    padding:36px;
 }
 
-body {
-  min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-  color: #f7f2ea;
-  background-image: linear-gradient(
-      90deg,
-      rgba(0,0,0,0.82) 0%,
-      rgba(0,0,0,0.58) 42%,
-      rgba(0,0,0,0.18) 100%
-    ),
-    url("CHARRY0422.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 36px;
+.toolbar{
+    max-width:1180px;
+    margin:0 auto 28px;
+    display:flex;
+    gap:12px;
+    justify-content:flex-end;
+    position:sticky;
+    top:18px;
+    z-index:10;
 }
 
-.toolbar {
-  max-width: 1180px;
-  margin: 0 auto 28px;
-  display: flex;
-  gap: 12px;
-  justify-content: flex-end;
+.toolbar a,
+.toolbar button{
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    padding:10px 16px;
+    border-radius:999px;
+    cursor:pointer;
+    font-size:12px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    backdrop-filter:blur(8px);
+    text-decoration:none;
 }
 
-button {
-  border: 1px solid rgba(255,255,255,0.25);
-  background: rgba(255,255,255,0.12);
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 12px;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  backdrop-filter: blur(8px);
+.toolbar a:hover,
+.toolbar button:hover{
+    background:rgba(255,255,255,.22);
 }
 
-button:hover {
-  background: rgba(255,255,255,0.22);
+.page{
+    max-width:1180px;
+    margin:auto;
 }
 
-.page {
-  max-width: 1180px;
-  margin: auto;
+.header{
+    margin-bottom:42px;
+    max-width:740px;
 }
 
-.header {
-  margin-bottom: 42px;
-  max-width: 680px;
+.label{
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:#d7c3a3;
+    margin-bottom:12px;
 }
 
-.label {
-  font-size: 11px;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: #d7c3a3;
-  margin-bottom: 12px;
+h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:56px;
+    line-height:.95;
+    font-weight:600;
+    margin-bottom:16px;
 }
 
-h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 56px;
-  line-height: 0.95;
-  font-weight: 600;
-  margin-bottom: 16px;
+.subtitle{
+    color:rgba(255,255,255,.72);
+    font-size:14px;
+    line-height:1.7;
+    max-width:640px;
 }
 
-.subtitle {
-  color: rgba(255,255,255,0.72);
-  font-size: 14px;
-  line-height: 1.7;
-  max-width: 560px;
+.section{
+    margin-top:54px;
+    padding-top:28px;
+    border-top:1px solid rgba(255,255,255,.22);
 }
 
-.org {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.section-title{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    gap:24px;
+    margin-bottom:28px;
 }
 
-.top-card {
-  width: 340px;
-  padding: 28px;
-  border-radius: 26px;
-  background: rgba(255,255,255,0.92);
-  color: #1b1815;
-  box-shadow: 0 24px 60px rgba(0,0,0,.35);
-  margin-bottom: 34px;
-  position: relative;
+.section-title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+    font-weight:600;
 }
 
-.top-card::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -34px;
-  width: 1px;
-  height: 34px;
-  background: rgba(255,255,255,.45);
+.section-title p{
+    max-width:520px;
+    text-align:right;
+    color:rgba(255,255,255,.68);
+    font-size:13px;
+    line-height:1.6;
 }
 
-.role {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: .16em;
-  color: #8d7659;
-  margin-bottom: 8px;
-  font-weight: 600;
+.org{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
 }
 
-.name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 34px;
-  line-height: 1;
-  margin-bottom: 8px;
+.top-card{
+    width:340px;
+    padding:28px;
+    border-radius:26px;
+    background:rgba(255,255,255,.92);
+    color:#1b1815;
+    box-shadow:0 24px 60px rgba(0,0,0,.35);
+    margin-bottom:34px;
+    position:relative;
 }
 
-.dept {
-  font-size: 12px;
-  color: #6b6258;
-  line-height: 1.5;
+.top-card::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-34px;
+    width:1px;
+    height:34px;
+    background:rgba(255,255,255,.45);
 }
 
-.cards-row {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-  width: 100%;
-  position: relative;
-  padding-top: 34px;
+.role{
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    color:#8d7659;
+    margin-bottom:8px;
+    font-weight:600;
 }
 
-.cards-row::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 8%;
-  right: 8%;
-  height: 1px;
-  background: rgba(255,255,255,.45);
+.name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    line-height:1;
+    margin-bottom:8px;
 }
 
-.card {
-  min-height: 310px;
-  padding: 20px 18px;
-  border-radius: 22px;
-  background: rgba(255,255,255,.88);
-  color: #1b1815;
-  box-shadow: 0 18px 45px rgba(0,0,0,.28);
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
+.dept{
+    font-size:12px;
+    color:#6b6258;
+    line-height:1.5;
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 5px;
-  width: 100%;
-  background: #b47a35;
+.cards-row{
+    display:grid;
+    gap:18px;
+    width:100%;
+    position:relative;
+    padding-top:34px;
 }
 
-.card.crm::before { background: #b47a35; }
-.card.sales::before { background: #9a4c28; }
-.card.creative::before { background: #d8c3a4; }
-.card.ops::before { background: #6f6a60; }
-.card.data::before { background: #191715; }
-
-.badge {
-  display: inline-block;
-  margin: 10px 0 14px;
-  padding: 5px 10px;
-  border-radius: 999px;
-  background: #1b1815;
-  color: #fff;
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
+.cards-row.current{
+    grid-template-columns:repeat(4,1fr);
 }
 
-.badge.hire {
-  background: #9a4c28;
+.cards-row.projected{
+    grid-template-columns:repeat(5,1fr);
 }
 
-.badge.plan {
-  background: #6f6a60;
+.cards-row::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:8%;
+    right:8%;
+    height:1px;
+    background:rgba(255,255,255,.45);
 }
 
-ul {
-  list-style: none;
-  border-top: 1px solid rgba(0,0,0,.12);
-  padding-top: 12px;
+.card{
+    min-height:520px;
+    padding:20px 18px;
+    border-radius:22px;
+    background:rgba(255,255,255,.90);
+    color:#1b1815;
+    box-shadow:0 18px 45px rgba(0,0,0,.28);
+    position:relative;
+    overflow:hidden;
+    backdrop-filter:blur(10px);
 }
 
-li {
-  font-size: 11px;
-  line-height: 1.45;
-  color: #4d4740;
-  margin-bottom: 8px;
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    height:5px;
+    width:100%;
+    background:#b47a35;
 }
 
-li::before {
-  content: "• ";
-  color: #b47a35;
+.card.management::before{background:#191715}
+.card.crm::before{background:#b47a35}
+.card.sales::before{background:#9a4c28}
+.card.creative::before{background:#d8c3a4}
+.card.ops::before{background:#6f6a60}
+.card.data::before{background:#191715}
+
+.badge{
+    display:inline-block;
+    margin:10px 0 14px;
+    padding:5px 10px;
+    border-radius:999px;
+    background:#1b1815;
+    color:#fff;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
 }
 
-.impact {
-  margin-top: 42px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  width: 100%;
+.badge.hire{background:#9a4c28}
+.badge.plan{background:#6f6a60}
+.badge.alert{background:#b47a35}
+
+ul{
+    list-style:none;
+    border-top:1px solid rgba(0,0,0,.12);
+    padding-top:12px;
 }
 
-.impact-card {
-  padding: 24px;
-  border-radius: 22px;
-  background: rgba(0,0,0,.42);
-  border: 1px solid rgba(255,255,255,.18);
-  backdrop-filter: blur(8px);
+li{
+    font-size:10.5px;
+    line-height:1.35;
+    color:#4d4740;
+    margin-bottom:6px;
 }
 
-.impact-card strong {
-  display: block;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 34px;
-  font-weight: 600;
-  margin-top: 8px;
+li::before{
+    content:"• ";
+    color:#b47a35;
 }
 
-.impact-card span {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .16em;
-  color: #d7c3a3;
+.impact{
+    margin-top:42px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    width:100%;
 }
 
-[contenteditable] {
-  outline: none;
-  border-radius: 4px;
+.impact-card{
+    padding:24px;
+    border-radius:22px;
+    background:rgba(0,0,0,.42);
+    border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(8px);
 }
 
-[contenteditable]:focus {
-  background: rgba(180,122,53,.16);
+.impact-card strong{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    font-weight:600;
+    margin-top:8px;
 }
 
-@media print {
-  body {
-    background-image: linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)), url("CHARRY0422.jpg");
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  .toolbar {
-    display: none;
-  }
+.impact-card span{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    color:#d7c3a3;
 }
 
-@media(max-width: 1000px) {
-  .cards-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .impact {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
+.note{
+    margin-top:22px;
+    padding:18px 20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.16);
+    color:rgba(255,255,255,.75);
+    font-size:13px;
+    line-height:1.7;
 }
 
-@media(max-width: 620px) {
-  body {
-    padding: 22px;
-  }
+[contenteditable]{
+    outline:none;
+    border-radius:4px;
+}
 
-  .cards-row {
-    grid-template-columns: 1fr;
-  }
+[contenteditable]:focus{
+    background:rgba(180,122,53,.16);
+}
 
-  .top-card {
-    width: 100%;
-  }
+@media print{
+    body{
+        background-image:
+            linear-gradient(rgba(0,0,0,.74),rgba(0,0,0,.74)),
+            url('CHARRY0422.jpg');
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+    }
+
+    .toolbar{
+        display:none;
+    }
+
+    .section{
+        break-inside:avoid;
+    }
+}
+
+@media(max-width:1100px){
+    .cards-row.current,
+    .cards-row.projected{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .impact{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .section-title p{
+        text-align:left;
+    }
+
+    h1{
+        font-size:42px;
+    }
+}
+
+@media(max-width:620px){
+    body{
+        padding:22px;
+    }
+
+    .cards-row.current,
+    .cards-row.projected{
+        grid-template-columns:1fr;
+    }
+
+    .top-card{
+        width:100%;
+    }
 }
 </style>
 </head>
@@ -308,129 +368,305 @@ li::before {
 <body>
 
 <div class="toolbar">
-  <button onclick="window.print()">Imprimir / PDF</button>
+    <a href="#cenario-atual">Cenário atual</a>
+    <a href="#cenario-projetado">Cenário projetado</a>
+    <button onclick="window.print()">Imprimir / PDF</button>
 </div>
 
 <main class="page">
 
-  <section class="header">
+<section class="header">
     <div class="label" contenteditable>Estrutura estratégica · E-commerce</div>
     <h1 contenteditable>Organograma E-commerce Charry</h1>
     <p class="subtitle" contenteditable>
-      Proposta de estrutura para sustentar o crescimento do canal digital, aumentar a capacidade operacional e fortalecer CRM, vendas ativas, dados e performance.
+        Leitura da estrutura atual versus estrutura projetada para sustentar o crescimento do canal digital, dar mais profundidade para CRM, vendas ativas, operação, dados e performance.
     </p>
-  </section>
+</section>
 
-  <section class="org">
-
-    <div class="top-card">
-      <div class="role" contenteditable>Gestão e estratégia</div>
-      <div class="name" contenteditable>Letícia</div>
-      <div class="dept" contenteditable>Head de E-commerce</div>
+<section id="cenario-atual" class="section">
+    <div class="section-title">
+        <div>
+            <div class="label" contenteditable>01 · Diagnóstico</div>
+            <h2 contenteditable>Cenário Atual</h2>
+        </div>
+        <p contenteditable>
+            Estrutura enxuta, com alta concentração de atividades estratégicas, operacionais e analíticas na gestão. O time atual sustenta o crescimento, mas opera com sobreposição de funções.
+        </p>
     </div>
 
-    <div class="cards-row">
+    <section class="org">
+        <div class="top-card">
+            <div class="role" contenteditable>Gestão e estratégico</div>
+            <div class="name" contenteditable>Letícia</div>
+            <div class="dept" contenteditable>Head de E-commerce · Gestão, mídia, CRM, site, DRE, calendário e dados</div>
+        </div>
 
-      <div class="card crm">
-        <div class="role" contenteditable>Analista de CRM</div>
-        <div class="name" contenteditable>A contratar</div>
-        <div class="dept" contenteditable>CRM, retenção e automações</div>
-        <span class="badge hire" contenteditable>Contratar agora</span>
-        <ul>
-          <li contenteditable>Calendário CRM</li>
-          <li contenteditable>Disparos de e-mail e WhatsApp</li>
-          <li contenteditable>Segmentação de clusters</li>
-          <li contenteditable>Automações e réguas</li>
-          <li contenteditable>Fechamento de CRM</li>
-          <li contenteditable>Análise de base e recompra</li>
-        </ul>
-      </div>
+        <div class="cards-row current">
 
-      <div class="card sales">
-        <div class="role" contenteditable>Inside Sales</div>
-        <div class="name" contenteditable>A contratar</div>
-        <div class="dept" contenteditable>Venda ativa e atendimento digital</div>
-        <span class="badge hire" contenteditable>Contratar agora</span>
-        <ul>
-          <li contenteditable>Venda ativa via WhatsApp</li>
-          <li contenteditable>Recuperação de clientes</li>
-          <li contenteditable>Atendimento canais digitais</li>
-          <li contenteditable>Clientes VIP e Mon Chéries</li>
-          <li contenteditable>Pré-vendas e ativações</li>
-          <li contenteditable>Pós-venda comercial</li>
-        </ul>
-      </div>
+            <div class="card management">
+                <div class="role" contenteditable>Letícia</div>
+                <div class="name" contenteditable>Gestão e estratégico</div>
+                <div class="dept" contenteditable>E-commerce</div>
+                <span class="badge alert" contenteditable>Alta concentração</span>
+                <ul>
+                    <li>Gestão - mídia paga</li>
+                    <li>Gestão - CRM</li>
+                    <li>Gestão - site</li>
+                    <li>Ensinar</li>
+                    <li>Suporte do e-commerce</li>
+                    <li>Fechamento mensal e DRE</li>
+                    <li>Material performance</li>
+                    <li>Planilhas de dados e gráficos: financeiro, performance e cobertura de estoque</li>
+                    <li>Cadastro de produto em marketplace</li>
+                    <li>Atualização dos status dos pedidos no marketplace + devoluções</li>
+                    <li>Pesquisa semanal</li>
+                    <li>Dados para inteligência de mercado</li>
+                    <li>Análise de produto/venda</li>
+                    <li>DRE - consultoria</li>
+                    <li>Calendário - macro e micro</li>
+                    <li>Gerenciamento do Trello</li>
+                    <li>Erros em NF e pedidos mais difíceis de descobrir o problema</li>
+                    <li>Reuniões semanais MKT | Comitê | Mídia</li>
+                    <li>Reuniões semanais consultoria</li>
+                    <li>Programação de pagamentos + envio de NFs</li>
+                    <li>Romaneio</li>
+                    <li>Liberação de peça para o e-commerce</li>
+                    <li>Tabelas e atualizações de transporte</li>
+                    <li>Aprovações diárias</li>
+                    <li>Revisão diária</li>
+                    <li>Compra de brinde / novos designs de embalagem</li>
+                    <li>Compra de crédito - disparos</li>
+                    <li>Revisão de comentários e atendimentos</li>
+                    <li>Feedback semanal</li>
+                    <li>Alinhamento de tarefas diário</li>
+                    <li>Alinhamento de ações a cada ação/lançamento</li>
+                    <li>Planejamento de tarefas</li>
+                </ul>
+            </div>
 
-      <div class="card creative">
-        <div class="role" contenteditable>Analista de Criativos</div>
-        <div class="name" contenteditable>Isa</div>
-        <div class="dept" contenteditable>Produção visual e site</div>
-        <span class="badge" contenteditable>Cargo existente</span>
-        <ul>
-          <li contenteditable>Banners e anúncios</li>
-          <li contenteditable>E-mail marketing visual</li>
-          <li contenteditable>Landing pages</li>
-          <li contenteditable>VM do site</li>
-          <li contenteditable>Troca de vitrines e links</li>
-          <li contenteditable>Ações comunidade</li>
-        </ul>
-      </div>
+            <div class="card creative">
+                <div class="role" contenteditable>Ana Carol</div>
+                <div class="name" contenteditable>Analista de Criativos | Assistente CRM</div>
+                <div class="dept" contenteditable>Criativos + CRM</div>
+                <span class="badge" contenteditable>Cargo existente</span>
+                <ul>
+                    <li>Segmentação de campanhas e clusters</li>
+                    <li>Análise de dados</li>
+                    <li>App de CRM</li>
+                    <li>Disparo e construção de e-mail marketing - cluster</li>
+                    <li>Anúncios - esporádico para ajudar na entrega</li>
+                    <li>Banners - esporádico para ajudar na entrega</li>
+                    <li>Suporte de maior grau de dificuldade</li>
+                    <li>Conferência diária do site</li>
+                    <li>Analisa o macro das redes sociais</li>
+                    <li>Ensina</li>
+                </ul>
+            </div>
 
-      <div class="card ops">
-        <div class="role" contenteditable>Assistente de Processos</div>
-        <div class="name" contenteditable>Thay</div>
-        <div class="dept" contenteditable>Operação e marketplace</div>
-        <span class="badge" contenteditable>Cargo existente</span>
-        <ul>
-          <li contenteditable>Cadastro de produtos</li>
-          <li contenteditable>Vínculo marketplace</li>
-          <li contenteditable>Romaneio</li>
-          <li contenteditable>Reposição de estoque</li>
-          <li contenteditable>Erros em pedidos / NF</li>
-          <li contenteditable>Seleções de produtos</li>
-        </ul>
-      </div>
+            <div class="card crm">
+                <div class="role" contenteditable>Isa</div>
+                <div class="name" contenteditable>Assistente de E-commerce</div>
+                <div class="dept" contenteditable>Criativos + CRM</div>
+                <span class="badge" contenteditable>Cargo existente</span>
+                <ul>
+                    <li>Suporte quando necessário</li>
+                    <li>Aplicação de descontos e cupons</li>
+                    <li>Romaneio</li>
+                    <li>Ações Charry Club e grupo VIP</li>
+                    <li>Troca do site: atualizar banners, vitrines e links</li>
+                    <li>Disparo em massa</li>
+                    <li>Banner</li>
+                    <li>Anúncio</li>
+                    <li>Edição de vídeos</li>
+                    <li>E-mail marketing diário</li>
+                    <li>Ação comunidade e grupo</li>
+                    <li>Marketplace - vínculo de produtos</li>
+                    <li>Regras de desconto</li>
+                    <li>Aplicativo</li>
+                    <li>Ensina</li>
+                </ul>
+            </div>
 
-      <div class="card data">
-        <div class="role" contenteditable>Analista de Dados</div>
-        <div class="name" contenteditable>A contratar</div>
-        <div class="dept" contenteditable>Dados, giro e performance</div>
-        <span class="badge plan" contenteditable>Contratar jan/27</span>
-        <ul>
-          <li contenteditable>Análise de dados do e-commerce</li>
-          <li contenteditable>Análise de giro de produto</li>
-          <li contenteditable>Análise de mídia</li>
-          <li contenteditable>Marketplaces novos</li>
-          <li contenteditable>Tabelas de transporte</li>
-          <li contenteditable>Devoluções marketplace</li>
-        </ul>
-      </div>
+            <div class="card ops">
+                <div class="role" contenteditable>Assistente de E-commerce</div>
+                <div class="name" contenteditable>Atendimento</div>
+                <div class="dept" contenteditable>Canais digitais e operação</div>
+                <span class="badge plan" contenteditable>Operacional</span>
+                <ul>
+                    <li>Atendimento dos canais digitais</li>
+                    <li>Pedidos, trocas e financeiro operacional</li>
+                    <li>Alimentação de planilha de venda do dia</li>
+                    <li>Reposições de estoque</li>
+                    <li>VM do site e vitrines</li>
+                    <li>Montagem de seleções</li>
+                    <li>Estornos</li>
+                    <li>Conferência de feed | estoque</li>
+                    <li>Sincronizar produtos</li>
+                    <li>Cadastro de produto</li>
+                    <li>Seleções de produtos</li>
+                </ul>
+            </div>
 
+        </div>
+    </section>
+
+    <div class="impact">
+        <div class="impact-card">
+            <span contenteditable>Capacidade atual</span>
+            <strong contenteditable>R$ 6,8 MM</strong>
+            <p class="subtitle" contenteditable>Projeção estimada 2026</p>
+        </div>
+
+        <div class="impact-card">
+            <span contenteditable>Principal gargalo</span>
+            <strong contenteditable>Gestão sobrecarregada</strong>
+            <p class="subtitle" contenteditable>Estratégico e operacional centralizados</p>
+        </div>
+
+        <div class="impact-card">
+            <span contenteditable>Risco</span>
+            <strong contenteditable>Perda de escala</strong>
+            <p class="subtitle" contenteditable>Limite de execução com estrutura atual</p>
+        </div>
+    </div>
+</section>
+
+<section id="cenario-projetado" class="section">
+    <div class="section-title">
+        <div>
+            <div class="label" contenteditable>02 · Proposta</div>
+            <h2 contenteditable>Cenário Projetado</h2>
+        </div>
+        <p contenteditable>
+            Estrutura proposta para transformar o canal em uma operação mais escalável, com papéis especializados e maior capacidade de geração de receita.
+        </p>
     </div>
 
-  </section>
+    <section class="org">
+        <div class="top-card">
+            <div class="role" contenteditable>Gestão e estratégia</div>
+            <div class="name" contenteditable>Letícia</div>
+            <div class="dept" contenteditable>Head de E-commerce · Estratégia, crescimento, performance e liderança do canal</div>
+        </div>
 
-  <section class="impact">
+        <div class="cards-row projected">
 
-    <div class="impact-card">
-      <span contenteditable>Estrutura atual</span>
-      <strong contenteditable>R$ 6,8 MM</strong>
-      <p class="subtitle" contenteditable>Capacidade estimada 2026</p>
+            <div class="card crm">
+                <div class="role" contenteditable>Analista de CRM</div>
+                <div class="name" contenteditable>A contratar</div>
+                <div class="dept" contenteditable>CRM, retenção e automações</div>
+                <span class="badge hire" contenteditable>Contratar agora</span>
+                <ul>
+                    <li>Planejamento de calendário CRM</li>
+                    <li>Briefing para execução de criativos</li>
+                    <li>Disparos de e-mail e WhatsApp</li>
+                    <li>Segmentação de campanhas e clusters</li>
+                    <li>Configuração de automações</li>
+                    <li>Fechamento de CRM</li>
+                    <li>Análise de base, recompra e retenção</li>
+                    <li>Apoio em campanhas de relacionamento</li>
+                </ul>
+            </div>
+
+            <div class="card sales">
+                <div class="role" contenteditable>Inside Sales</div>
+                <div class="name" contenteditable>A contratar</div>
+                <div class="dept" contenteditable>Venda ativa e atendimento digital</div>
+                <span class="badge hire" contenteditable>Contratar agora</span>
+                <ul>
+                    <li>Venda ativa via WhatsApp</li>
+                    <li>Ativação de clientes por cluster</li>
+                    <li>Recuperação de clientes inativos</li>
+                    <li>Atendimento comercial dos canais digitais</li>
+                    <li>Clientes VIP e Mon Chéries</li>
+                    <li>Pré-vendas e ativações comerciais</li>
+                    <li>Pós-venda comercial</li>
+                    <li>Apoio em lançamentos e campanhas</li>
+                </ul>
+            </div>
+
+            <div class="card creative">
+                <div class="role" contenteditable>Analista de Criativos</div>
+                <div class="name" contenteditable>Isa</div>
+                <div class="dept" contenteditable>Produção visual e site</div>
+                <span class="badge" contenteditable>Cargo existente</span>
+                <ul>
+                    <li>Banners</li>
+                    <li>Anúncios</li>
+                    <li>Edição de vídeos</li>
+                    <li>E-mail marketing visual</li>
+                    <li>Landing pages</li>
+                    <li>VM do site</li>
+                    <li>Troca de vitrines e links</li>
+                    <li>Ações comunidade e grupo VIP</li>
+                </ul>
+            </div>
+
+            <div class="card ops">
+                <div class="role" contenteditable>Assistente de Processos</div>
+                <div class="name" contenteditable>Thay</div>
+                <div class="dept" contenteditable>Operação e marketplace</div>
+                <span class="badge" contenteditable>Cargo existente</span>
+                <ul>
+                    <li>Cadastro de produtos</li>
+                    <li>Sincronização de produtos</li>
+                    <li>Vínculo marketplace</li>
+                    <li>Atualização de pedidos marketplace</li>
+                    <li>Devoluções marketplace</li>
+                    <li>Romaneio</li>
+                    <li>Reposição de estoque</li>
+                    <li>Erros em pedidos e NF</li>
+                    <li>Seleções de produtos</li>
+                    <li>Tabelas de transporte</li>
+                </ul>
+            </div>
+
+            <div class="card data">
+                <div class="role" contenteditable>Analista de Dados</div>
+                <div class="name" contenteditable>A contratar</div>
+                <div class="dept" contenteditable>Dados, giro e performance</div>
+                <span class="badge plan" contenteditable>Contratar jan/27</span>
+                <ul>
+                    <li>Análise de dados do e-commerce</li>
+                    <li>Análise de giro de produto</li>
+                    <li>Análise de mídia</li>
+                    <li>Análise de criativos</li>
+                    <li>Captura e preenchimento de dados</li>
+                    <li>Relatórios de performance</li>
+                    <li>Dados para inteligência de mercado</li>
+                    <li>Cobertura de estoque</li>
+                    <li>Marketplaces atuais e novos</li>
+                    <li>Dashboards e gráficos executivos</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="impact">
+        <div class="impact-card">
+            <span contenteditable>Estrutura proposta</span>
+            <strong contenteditable>R$ 8,1 MM</strong>
+            <p class="subtitle" contenteditable>Meta projetada 2027</p>
+        </div>
+
+        <div class="impact-card">
+            <span contenteditable>Potencial otimista</span>
+            <strong contenteditable>R$ 8,8 MM</strong>
+            <p class="subtitle" contenteditable>Com equipe, CRM e vendas ativas estruturadas</p>
+        </div>
+
+        <div class="impact-card">
+            <span contenteditable>Incremento esperado</span>
+            <strong contenteditable>+ R$ 1,3 MM</strong>
+            <p class="subtitle" contenteditable>Potencial adicional vs. capacidade atual</p>
+        </div>
     </div>
 
-    <div class="impact-card">
-      <span contenteditable>Estrutura proposta</span>
-      <strong contenteditable>R$ 8,1 MM</strong>
-      <p class="subtitle" contenteditable>Meta projetada 2027</p>
+    <div class="note" contenteditable>
+        Resumo executivo: a proposta não é apenas aumentar equipe, mas reorganizar responsabilidades para liberar a gestão para estratégia, ampliar a capacidade de CRM e vendas ativas, reduzir gargalos operacionais e sustentar o crescimento projetado para 2027.
     </div>
-
-    <div class="impact-card">
-      <span contenteditable>Incremento esperado</span>
-      <strong contenteditable>+ R$ 1,3 MM</strong>
-      <p class="subtitle" contenteditable>Potencial adicional com equipe estruturada</p>
-    </div>
-
-  </section>
+</section>
 
 </main>
 
