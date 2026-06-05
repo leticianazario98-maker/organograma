@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0053)https://leticianazario98-maker.github.io/organograma/ -->
+<!-- saved from url=(0052)file:///C:/Users/supervisao01/Downloads/preview.html -->
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -353,11 +353,94 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
   box-shadow:0 14px 40px rgba(0,0,0,.42) !important;
 }
 
+
+
+/* CRONOGRAMA DE EVOLUÇÃO DA ESTRUTURA */
+.cronograma-estrutura{
+  width:100%;
+  margin:28px 0 0;
+  padding:28px 30px;
+  border:1px solid rgba(255,255,255,.16);
+  background:linear-gradient(135deg,rgba(69,41,30,.56),rgba(29,25,22,.48)) !important;
+  box-shadow:0 10px 28px rgba(0,0,0,.18) !important;
+  border-radius:4px !important;
+  backdrop-filter:blur(8px);
+}
+.cronograma-estrutura h3{
+  font-family:Gotham, Arial, sans-serif;
+  font-size:27px;
+  line-height:1.18;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:.022em;
+  color:var(--cor-titulo);
+  margin-bottom:10px;
+}
+.cronograma-estrutura p{
+  max-width:780px;
+  color:var(--cor-subtexto);
+  font-size:13px;
+  line-height:1.72;
+  margin-bottom:18px;
+}
+.cronograma-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 2.6fr;
+  gap:0;
+  width:100%;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.16);
+  background:#fbf5eb;
+  color:var(--cor-card-texto);
+}
+.cronograma-head,
+.cronograma-cell{
+  padding:15px 16px;
+  border-right:1px solid rgba(0,0,0,.10);
+  border-bottom:1px solid rgba(0,0,0,.10);
+}
+.cronograma-head:nth-child(3n),
+.cronograma-cell:nth-child(3n){
+  border-right:none;
+}
+.cronograma-head{
+  background:#f2ece3;
+  color:#8d7659;
+  font-size:9.5px;
+  line-height:1.3;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.cronograma-cell{
+  color:#4d463e;
+  font-size:11px;
+  line-height:1.52;
+}
+.cronograma-cell strong{
+  display:block;
+  color:#1f1b17;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+}
+@media(max-width:760px){
+  .cronograma-grid{grid-template-columns:1fr}
+  .cronograma-head{display:none}
+  .cronograma-cell{border-right:none}
+  .cronograma-cell.periodo::before{content:'PERÍODO';display:block;color:#8d7659;font-size:9px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+  .cronograma-cell.contratacao::before{content:'CONTRATAÇÃO';display:block;color:#8d7659;font-size:9px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+  .cronograma-cell.objetivo::before{content:'OBJETIVO';display:block;color:#8d7659;font-size:9px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+}
+@media print{
+  .cronograma-estrutura{break-inside:avoid}
+}
+
 </style>
 </head>
 <body>
 
-<div class="editor-panel" id="editorPanel">
+<div class="editor-panel minimized" id="editorPanel">
   <h3>Painel de edição</h3>
   <p>Edite os textos direto na página. Para mudar uma cor específica, clique em um texto ou bloco e use “Selecionado”.</p>
   <div class="editor-row"><label>Texto geral</label><input type="color" data-var="--cor-texto" value="#f7f2ea"></div>
@@ -377,36 +460,36 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
     <button type="button" id="hidePanel">Minimizar</button>
   </div>
 </div>
-<button type="button" id="showPanel" class="editor-toggle" style="display:none" aria-label="Abrir painel de edição">Editar cores</button>
+<button type="button" id="showPanel" class="editor-toggle" style="display: block;" aria-label="Abrir painel de edição">Editar cores</button>
 
 <div class="toolbar">
-    <a href="#cenario-atual">Cenário atual</a>
-    <a href="#cenario-projetado">Cenário projetado</a>
-    <a href="#redistribuicao">Redistribuição</a>
+    <a href="https://leticianazario98-maker.github.io/organograma/#cenario-atual">Cenário atual</a>
+    <a href="https://leticianazario98-maker.github.io/organograma/#cenario-projetado">Cenário projetado</a>
+    <a href="https://leticianazario98-maker.github.io/organograma/#redistribuicao">Redistribuição</a>
 </div>
 <main class="page">
 <section class="header">
     <div class="label" contenteditable="true" data-edit-index="0">Estrutura estratégica · E-commerce</div>
-    <h1 contenteditable="true" data-edit-index="1">Organograma E-commerce Charry</h1>
-    <p class="subtitle" contenteditable="true" data-edit-index="2">Leitura da estrutura atual versus estrutura projetada para sustentar o crescimento do canal digital, redistribuir responsabilidades e dar mais profundidade para CRM, vendas ativas, operação, dados e performance.</p>
+    <h1 contenteditable="true" data-edit-index="1" class="">Organograma&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; E-commerce&nbsp;</h1>
+    <p class="subtitle" contenteditable="true" data-edit-index="2">Leitura da estrutura atual vs estrutura projetada para sustentar o crescimento do canal digital, redistribuir responsabilidades e dar mais profundidade para CRM, Inside Sales, operação, dados e performance.</p>
 </section>
 <section id="cenario-atual" class="section">
-    <div class="section-title"><div><div class="label" contenteditable="true" data-edit-index="3">01 · Diagnóstico</div><h2 contenteditable="true" data-edit-index="4">Cenário Atual</h2></div><p contenteditable="true" data-edit-index="5">Estrutura enxuta, com alta concentração de atividades estratégicas, operacionais e analíticas na gestão.</p></div>
+    <div class="section-title"><div><div class="label" contenteditable="true" data-edit-index="3">01 · Diagnóstico</div><h2 contenteditable="true" data-edit-index="4">Cenário Atual</h2></div><p contenteditable="true" data-edit-index="5" class="">Estrutura enxuta, com alta concentração de atividades estratégicas, operacionais e analíticas na gestão e equipe.</p></div>
     <section class="org">
     <div class="gargalos">
-        <h3 contenteditable="true" data-edit-index="6">Gargalos atuais</h3>
+        <h3 contenteditable="true" data-edit-index="6" class="">Gargalos&nbsp;</h3>
         <p contenteditable="true" data-edit-index="7">Principais pontos que limitam a velocidade de execução, a evolução dos canais e a capacidade de crescimento da operação atual.</p>
         <div class="gargalos-grid">
-            <div class="gargalo-item" contenteditable="true" data-edit-index="8">Falta de dedicação exclusiva para CRM</div>
-            <div class="gargalo-item" contenteditable="true" data-edit-index="9">Falta de atuação ativa via WhatsApp</div>
+            <div class="gargalo-item" contenteditable="true" data-edit-index="8">Falta de dedicação exclusiva para CRM e Dados&nbsp;</div>
+            <div class="gargalo-item" contenteditable="true" data-edit-index="9">Falta de atuação ativa via WhatsApp e Inside Sales</div>
             <div class="gargalo-item" contenteditable="true" data-edit-index="10">Marketplace sem expansão</div>
             <div class="gargalo-item" contenteditable="true" data-edit-index="11">Excesso de tarefas operacionais concentradas</div>
-            <div class="gargalo-item" contenteditable="true" data-edit-index="12">Baixa velocidade de execução</div>
+            <div class="gargalo-item" contenteditable="true" data-edit-index="12">Baixa velocidade de execução para novas ações além do escopo&nbsp;</div>
             <div class="gargalo-item" contenteditable="true" data-edit-index="13">Dependência excessiva da liderança para atividades táticas</div>
         </div>
     </div>
 
-        <div class="top-card"><div class="role" contenteditable="true" data-edit-index="14">Gestão e estratégico</div><div class="name" contenteditable="true" data-edit-index="15">Letícia</div><div class="dept" contenteditable="true" data-edit-index="16">Head de E-commerce · Gestão, mídia, CRM, site, DRE, calendário e dados</div></div>
+        <div class="top-card"><div class="role" contenteditable="true" data-edit-index="14">Gestão e estratégico</div><div class="name" contenteditable="true" data-edit-index="15">Letícia</div><div class="dept" contenteditable="true" data-edit-index="16">e-commerce</div></div>
         <div class="cards-row current">
             <div class="card management">
                 <div class="role" contenteditable="true" data-edit-index="17">Letícia</div>
@@ -418,21 +501,21 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
                     <li contenteditable="true" data-edit-index="22">Suporte do e-commerce</li>
                     <li contenteditable="true" data-edit-index="23">Fechamento mensal e DRE</li>
                     <li contenteditable="true" data-edit-index="24">Material performance</li>
-                    <li contenteditable="true" data-edit-index="25">Planilhas de dados e gráficos: financeiro, performance e cobertura de estoque</li>
-                    <li contenteditable="true" data-edit-index="26">Cadastro de produto em marketplace</li>
-                    <li contenteditable="true" data-edit-index="27">Atualização dos status dos pedidos no marketplace + devoluções</li>
-                    <li contenteditable="true" data-edit-index="28">Pesquisa semanal</li>
-                    <li contenteditable="true" data-edit-index="29">Dados para inteligência de mercado</li>
-                    <li contenteditable="true" data-edit-index="30">Análise de produto/venda</li>
-                    <li contenteditable="true" data-edit-index="31">DRE - consultoria</li>
-                    <li contenteditable="true" data-edit-index="32">Calendário - macro e micro</li>
-                    <li contenteditable="true" data-edit-index="33">Gerenciamento do Trello</li>
-                    <li contenteditable="true" data-edit-index="34">Erros em NF e pedidos mais difíceis de descobrir o problema</li>
-                    <li contenteditable="true" data-edit-index="35">Reuniões semanais MKT | Comitê | Mídia</li>
-                    <li contenteditable="true" data-edit-index="36">Reuniões semanais consultoria</li>
-                    <li contenteditable="true" data-edit-index="37">Programação de pagamentos + envio de NFs</li>
-                    <li contenteditable="true" data-edit-index="38">Romaneio</li>
-                    <li contenteditable="true" data-edit-index="39">Liberação de peça para o e-commerce</li>
+                    <li contenteditable="true" data-edit-index="25" class="">Planilhas de dados e gráficos: financeiro, performance e cobertura de estoque</li>
+                    <li contenteditable="true" data-edit-index="26" class="">Cadastro de produto em marketplace</li>
+                    <li contenteditable="true" data-edit-index="27" class="">Atualização dos status dos pedidos no marketplace + devoluções</li>
+                    <li contenteditable="true" data-edit-index="28" class="">Pesquisa semanal - Tendências e novidades&nbsp;</li>
+                    <li contenteditable="true" data-edit-index="29" class="">Dados para inteligência de mercado</li>
+                    <li contenteditable="true" data-edit-index="30" class="">Análise de produto/venda</li>
+                    <li contenteditable="true" data-edit-index="31" class="">DRE - consultoria</li>
+                    <li contenteditable="true" data-edit-index="32" class="">Calendário - macro e micro</li>
+                    <li contenteditable="true" data-edit-index="33" class="">Gerenciamento do Trello</li>
+                    <li contenteditable="true" data-edit-index="34" class="">Erros em NF e pedidos mais difíceis de descobrir o problema</li>
+                    <li contenteditable="true" data-edit-index="35" class="">Reuniões semanais MKT | Comitê | Mídia</li>
+                    <li contenteditable="true" data-edit-index="36" class="">Reuniões semanais consultoria</li>
+                    <li contenteditable="true" data-edit-index="37" class="">Programação de pagamentos + envio de NFs</li>
+                    <li contenteditable="true" data-edit-index="38" class="">Romaneio</li>
+                    <li contenteditable="true" data-edit-index="39" class="">Liberação de peça para o e-commerce</li>
                     <li contenteditable="true" data-edit-index="40">Tabelas e atualizações de transporte</li>
                     <li contenteditable="true" data-edit-index="41">Aprovações diárias</li>
                     <li contenteditable="true" data-edit-index="42">Revisão diária</li>
@@ -440,81 +523,81 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
                     <li contenteditable="true" data-edit-index="44">Compra de crédito - disparos</li>
                     <li contenteditable="true" data-edit-index="45">Revisão de comentários e atendimentos</li>
                     <li contenteditable="true" data-edit-index="46">Feedback semanal</li>
-                    <li contenteditable="true" data-edit-index="47">Alinhamento de tarefas diário</li>
-                    <li contenteditable="true" data-edit-index="48">Alinhamento de ações a cada ação/lançamento</li>
-                    <li contenteditable="true" data-edit-index="49">Planejamento de tarefas</li>
+                    <li contenteditable="true" data-edit-index="47" class="">Alinhamento de tarefas diário</li>
+                    <li contenteditable="true" data-edit-index="48" class="">Alinhamento de ações a cada ação/lançamento</li>
+                    <li contenteditable="true" data-edit-index="49" class="">Planejamento de tarefas</li>
                 </ul>
             </div>
             <div class="card creative">
-                <div class="role" contenteditable="true" data-edit-index="50">Ana Carol</div>
-                <div class="name" contenteditable="true" data-edit-index="51">Analista de Criativos | Assistente CRM</div>
-                <div class="dept" contenteditable="true" data-edit-index="52">Criativos + CRM</div>
+                <div class="role" contenteditable="true" data-edit-index="50">Ana Carolina - grávida</div>
+                <div class="name" contenteditable="true" data-edit-index="51">Analista de&nbsp;<div contenteditable="true">E-COMMERCE</div></div>
+                <div class="dept" contenteditable="true" data-edit-index="52">CRM + Suporte a gestão&nbsp;&nbsp;</div>
                 <span class="badge " contenteditable="true" data-edit-index="53">Cargo existente</span>
                 <ul>
-                    <li contenteditable="true" data-edit-index="54">Segmentação de campanhas e clusters</li>
-                    <li contenteditable="true" data-edit-index="55">Análise de dados</li>
-                    <li contenteditable="true" data-edit-index="56">App de CRM</li>
-                    <li contenteditable="true" data-edit-index="57">Disparo e construção de estratégia para e-mail marketing por cluster</li>
-                    <li contenteditable="true" data-edit-index="58">Anúncios — esporádico para ajudar na entrega</li>
+                    <li contenteditable="true" data-edit-index="54" class="">Segmentação de campanhas e clusters</li>
+                    <li contenteditable="true" data-edit-index="55" class="">Análise de dados</li>
+                    <li contenteditable="true" data-edit-index="56" class="">App de CRM</li>
+                    <li contenteditable="true" data-edit-index="57" class="">Disparo e construção de tema esegmentação&nbsp; &nbsp; para e-mail marketing e hsm por cluster&nbsp;</li>
+                    <li contenteditable="true" data-edit-index="58" class="">Anúncios — esporádico para ajudar na&nbsp; &nbsp; &nbsp; &nbsp;entrega</li>
                     <li contenteditable="true" data-edit-index="59">Banners — esporádico para ajudar na entrega</li>
                     <li contenteditable="true" data-edit-index="60">Suporte de maior grau de dificuldade</li>
                     <li contenteditable="true" data-edit-index="61">Conferência diária do site</li>
                     <li contenteditable="true" data-edit-index="62">Analisa o macro das redes sociais</li>
-                    <li contenteditable="true" data-edit-index="63">Ensina</li>
+                    <li contenteditable="true" data-edit-index="63" class="">Ensina&nbsp;</li>
                 </ul>
             </div>
             <div class="card crm">
-                <div class="role" contenteditable="true" data-edit-index="64">Isa</div>
-                <div class="name" contenteditable="true" data-edit-index="65">Assistente de E-commerce</div>
-                <div class="dept" contenteditable="true" data-edit-index="66">Criativos + CRM</div>
+                <div class="role" contenteditable="true" data-edit-index="64">Isadora</div>
+                <div class="name" contenteditable="true" data-edit-index="65">analista de&nbsp;<div contenteditable="true">E-commerce</div></div>
+                <div class="dept" contenteditable="true" data-edit-index="66">Criativos + operação do site + CRM</div>
                 <span class="badge " contenteditable="true" data-edit-index="67">Cargo existente</span>
                 <ul>
-                    <li contenteditable="true" data-edit-index="68">Suporte quando necessário</li>
-                    <li contenteditable="true" data-edit-index="69">Aplicação de descontos e cupons</li>
-                    <li contenteditable="true" data-edit-index="70">Romaneio</li>
-                    <li contenteditable="true" data-edit-index="71">Ações Charry Club e grupo VIP</li>
-                    <li contenteditable="true" data-edit-index="72">Troca do site: atualizar banners, vitrines e links</li>
-                    <li contenteditable="true" data-edit-index="73">Disparo em massa</li>
-                    <li contenteditable="true" data-edit-index="74">Banner</li>
-                    <li contenteditable="true" data-edit-index="75">Anúncio</li>
-                    <li contenteditable="true" data-edit-index="76">Edição de vídeos</li>
-                    <li contenteditable="true" data-edit-index="77">E-mail marketing diário</li>
-                    <li contenteditable="true" data-edit-index="78">Ação comunidade e grupo</li>
-                    <li contenteditable="true" data-edit-index="79">Marketplace — vínculo de produtos</li>
-                    <li contenteditable="true" data-edit-index="80">Regras de desconto</li>
-                    <li contenteditable="true" data-edit-index="81">Aplicativo</li>
+                    <li contenteditable="true" data-edit-index="68" class="">Suporte quando necessário</li>
+                    <li contenteditable="true" data-edit-index="69" class="">Aplicação de descontos e cupons</li>
+                    <li contenteditable="true" data-edit-index="70" class="">Romaneio</li>
+                    <li contenteditable="true" data-edit-index="71" class="">Ações Charry Club e grupo VIP<div contenteditable="true">&nbsp; Canal instagram (Assumimos um novo canal)</div></li>
+                    <li contenteditable="true" data-edit-index="72" class="">Troca do site: atualizar banners, vitrines e links</li>
+                    <li contenteditable="true" data-edit-index="73" class="">Disparo em massa</li>
+                    <li contenteditable="true" data-edit-index="74" class="">Banner</li>
+                    <li contenteditable="true" data-edit-index="75" class="">Anúncio</li>
+                    <li contenteditable="true" data-edit-index="76" class="">Edição de vídeos</li>
+                    <li contenteditable="true" data-edit-index="77" class="">E-mail marketing diário</li>
+                    <li contenteditable="true" data-edit-index="78" class="">Ação comunidade e grupo</li>
+                    <li contenteditable="true" data-edit-index="79" class="">Marketplace — vínculo de produtos</li>
+                    <li contenteditable="true" data-edit-index="80" class="">Regras de desconto</li>
+                    <li contenteditable="true" data-edit-index="81" class="">Aplicativos e landing pages&nbsp;</li>
                     <li contenteditable="true" data-edit-index="82">Ensina</li>
                 </ul>
             </div>
             <div class="card ops">
-                <div class="role" contenteditable="true" data-edit-index="83">Assistente de E-commerce</div>
-                <div class="name" contenteditable="true" data-edit-index="84">Atendimento</div>
+                <div class="role" contenteditable="true" data-edit-index="83">Atendimento e processos</div>
+                <div class="name" contenteditable="true" data-edit-index="84">assistente de e-commerce&nbsp;</div>
                 <div class="dept" contenteditable="true" data-edit-index="85">Canais digitais e operação</div>
                 <span class="badge plan" contenteditable="true" data-edit-index="86">Operacional</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="87">Atendimento dos canais digitais</li>
                     <li contenteditable="true" data-edit-index="88">Pedidos, trocas e financeiro operacional</li>
                     <li contenteditable="true" data-edit-index="89">Alimentação de planilha de venda do dia</li>
-                    <li contenteditable="true" data-edit-index="90">Reposições de estoque</li>
+                    <li contenteditable="true" data-edit-index="90" class="">Reposições de estoque</li>
                     <li contenteditable="true" data-edit-index="91">VM do site e vitrines</li>
-                    <li contenteditable="true" data-edit-index="92">Montagem de seleções</li>
-                    <li contenteditable="true" data-edit-index="93">Estornos</li>
-                    <li contenteditable="true" data-edit-index="94">Conferência de feed | estoque</li>
-                    <li contenteditable="true" data-edit-index="95">Sincronizar produtos</li>
-                    <li contenteditable="true" data-edit-index="96">Cadastro de produto</li>
+                    <li contenteditable="true" data-edit-index="92" class="">Montagem de seleções</li>
+                    <li contenteditable="true" data-edit-index="93" class="">Estornos</li>
+                    <li contenteditable="true" data-edit-index="94" class="">Conferência de feed | estoque</li>
+                    <li contenteditable="true" data-edit-index="95" class="">Sincronizar produtos</li>
+                    <li contenteditable="true" data-edit-index="96" class="">Cadastro de produto</li>
                     <li contenteditable="true" data-edit-index="97">Seleções de produtos</li>
                 </ul>
             </div>
         </div>
     </section>
     <div class="impact-title">
-        <h3 contenteditable="true" data-edit-index="98">Os valores projetados de entrega da equipe</h3>
+        <h3 contenteditable="true" data-edit-index="98" class="">Os valores projetados de entrega da equipe</h3>
         <p contenteditable="true" data-edit-index="99" class="">Mesmo com otimizações e ganhos de produtividade, a estrutura atual possui um limite de crescimento por concentração de atividades e baixa capacidade de execução simultânea.</p>
     </div>
 
     <div class="impact">
         <div class="impact-card" contenteditable="true" data-edit-index="100" style="background: rgb(44, 33, 27);"><span contenteditable="true" data-edit-index="101">Estrutura atual</span><strong contenteditable="true" data-edit-index="102">R$ 6 MM</strong><p class="subtitle" contenteditable="true" data-edit-index="103">Capacidade estimada mantendo a estrutura atual.</p></div>
-        <div class="impact-card" contenteditable="true" data-edit-index="104" style="background: rgb(43, 33, 28);"><span contenteditable="true" data-edit-index="105">Potencial otimista</span><strong contenteditable="true" data-edit-index="106">R$ 6,8 MM</strong><p class="subtitle" contenteditable="true" data-edit-index="107">Com ganhos de eficiência sem ampliação da equipe.</p></div>
+        <div class="impact-card" contenteditable="true" data-edit-index="104" style="background: rgb(226, 137, 96);"><span contenteditable="true" data-edit-index="105">Potencial otimista</span><strong contenteditable="true" data-edit-index="106" class="">R$ 6,8 MM</strong><p class="subtitle" contenteditable="true" data-edit-index="107">Ganhos de eficiência com ampliação da equipe. (Sem perca de operação)</p></div>
         <div class="impact-card" contenteditable="true" data-edit-index="108"><span contenteditable="true" data-edit-index="109">Risco</span><strong contenteditable="true" data-edit-index="110">Perda de escala</strong><p class="subtitle" contenteditable="true" data-edit-index="111">Limite de execução e crescimento com a estrutura atual.</p></div>
     </div>
 
@@ -524,35 +607,34 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
     <div class="section-title"><div><div class="label" contenteditable="true" data-edit-index="113">02 · Proposta</div><h2 contenteditable="true" data-edit-index="114">Cenário Projetado</h2></div><p contenteditable="true" data-edit-index="115">Estrutura proposta para transformar o canal em uma operação mais escalável, com papéis especializados e maior capacidade de geração de receita.</p></div>
     <section class="org">
     <div class="oportunidades" style="background: rgb(44, 26, 17);">
-        <h3 contenteditable="true" data-edit-index="116">Oportunidades de crescimento</h3>
+        <h3 contenteditable="true" data-edit-index="116" class="">Oportunidades&nbsp;</h3>
         <p contenteditable="true" data-edit-index="117">Com a nova estrutura, o canal ganha mais capacidade para evoluir frentes que hoje já existem, mas ainda têm potencial de escala, personalização, conversão e incremento de receita.</p>
         <div class="oportunidades-grid">
             <div class="oportunidade-item" contenteditable="true" data-edit-index="118">
-                <h4 contenteditable="true" data-edit-index="119">CRM</h4>
+                <h4 contenteditable="true" data-edit-index="119" class="">CRM</h4><div><br contenteditable="true"></div>
                 <span class="oportunidade-tag" contenteditable="true" data-edit-index="120">Hoje</span>
                 <ul>
-                    <li contenteditable="true" data-edit-index="121">Segmentação por clusters implementada</li>
-                    <li contenteditable="true" data-edit-index="122">Jornadas automatizadas ativas</li>
-                    <li contenteditable="true" data-edit-index="123">Estratégias de cross-sell e relacionamento em operação</li>
-                </ul>
+                    <li contenteditable="true" data-edit-index="121" class="">Segmentação por clusters implementada</li>
+                    <li contenteditable="true" data-edit-index="122" class="">Jornadas automatizadas ativas</li>
+                    <li contenteditable="true" data-edit-index="123" class="">Estratégias de cross-sell e relacionamento em operação</li>
+                </ul><div><span style="font-size: 11px;" contenteditable="true"><br contenteditable="true"></span></div><div><span style="font-size: 11px;" contenteditable="true"><br contenteditable="true"></span></div>
                 <span class="oportunidade-tag potencial" contenteditable="true" data-edit-index="124">Potencial</span>
                 <ul>
-                    <li contenteditable="true" data-edit-index="125">Maior personalização da comunicação</li>
-                    <li contenteditable="true" data-edit-index="126">Ampliação de testes e otimizações</li>
+                    <li contenteditable="true" data-edit-index="125" class="">Personalização da comunicação</li>
+                    <li contenteditable="true" data-edit-index="126" class="">Ampliação de testes e otimizações (Teste A/B)</li>
                     <li contenteditable="true" data-edit-index="127">Maior integração entre CRM, WhatsApp e mídia</li>
-                    <li contenteditable="true" data-edit-index="128">Aumento da frequência de compra</li>
-                    <li contenteditable="true" data-edit-index="129">Crescimento do ticket médio e LTV</li>
-                    <li contenteditable="true" data-edit-index="130">Maior aproveitamento da base de clientes</li>
+                    <li contenteditable="true" data-edit-index="128" class="">Aumento da frequência de compra</li>
+                    <li contenteditable="true" data-edit-index="129" class="">Crescimento do ticket médio e LTV</li>
+                    <li contenteditable="true" data-edit-index="130" class="">Maior aproveitamento da base de clientes</li>
                 </ul>
             </div>
 
             <div class="oportunidade-item" contenteditable="true" data-edit-index="131">
-                <h4 contenteditable="true" data-edit-index="132">WhatsApp</h4>
+                <h4 contenteditable="true" data-edit-index="132" class="">INSIDE SALES&nbsp;</h4><div><br contenteditable="true"></div>
                 <span class="oportunidade-tag" contenteditable="true" data-edit-index="133">Hoje</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="134">Canal predominantemente reativo</li>
-                    <li contenteditable="true" data-edit-index="135">Atuação focada em atendimento</li>
-                </ul>
+                    <li contenteditable="true" data-edit-index="135" class="">Atuação focada em atendimento personalizado.&nbsp;</li><li contenteditable="true" data-edit-index="135" class="selected-editable">Atuará em conjunto com a pessoa de CRM</li></ul><div><span style="font-size: 11px;" contenteditable="true"><br contenteditable="true"></span></div>
                 <span class="oportunidade-tag potencial" contenteditable="true" data-edit-index="136">Potencial</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="137">Clusterização baseada em RFV</li>
@@ -565,12 +647,12 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
             </div>
 
             <div class="oportunidade-item" contenteditable="true" data-edit-index="143">
-                <h4 contenteditable="true" data-edit-index="144">Marketplace</h4>
+                <h4 contenteditable="true" data-edit-index="144" class="">Marketplace</h4><div><br contenteditable="true"></div>
                 <span class="oportunidade-tag" contenteditable="true" data-edit-index="145">Hoje</span>
                 <ul>
-                    <li contenteditable="true" data-edit-index="146">Operação focada em manutenção</li>
-                    <li contenteditable="true" data-edit-index="147">Baixa exploração de oportunidades de expansão</li>
-                </ul>
+                    <li contenteditable="true" data-edit-index="146" class="">Operação focada em manutenção</li>
+                    <li contenteditable="true" data-edit-index="147" class="">Baixa exploração de oportunidades e de expansão</li>
+                </ul><div><span style="font-size: 11px;" contenteditable="true"><br contenteditable="true"></span></div><div><span style="font-size: 11px;" contenteditable="true"><br contenteditable="true"></span></div><div><span style="font-size: 11px;" contenteditable="true"><br contenteditable="true"></span></div>
                 <span class="oportunidade-tag potencial" contenteditable="true" data-edit-index="148">Potencial</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="149">Entrada em novos marketplaces</li>
@@ -582,12 +664,12 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
             </div>
 
             <div class="oportunidade-item" contenteditable="true" data-edit-index="154">
-                <h4 contenteditable="true" data-edit-index="155">Site e Conversão</h4>
+                <h4 contenteditable="true" data-edit-index="155" class="">Site e Conversão</h4><div><br contenteditable="true"></div>
                 <span class="oportunidade-tag" contenteditable="true" data-edit-index="156">Hoje</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="157">Atualizações operacionais</li>
-                    <li contenteditable="true" data-edit-index="158">Pouco tempo dedicado à otimização contínua</li>
-                </ul>
+                    <li contenteditable="true" data-edit-index="158" class="">Pouco tempo dedicado à otimização contínua</li>
+                </ul><div><span style="font-size: 11px;" contenteditable="true"><br contenteditable="true"></span></div><div><span style="font-size: 11px;" contenteditable="true"><br contenteditable="true"></span></div><div><span style="font-size: 11px;" contenteditable="true"><br contenteditable="true"></span></div>
                 <span class="oportunidade-tag potencial" contenteditable="true" data-edit-index="159">Potencial</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="160">Projetos de CRO (Conversion Rate Optimization)</li>
@@ -601,12 +683,12 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
             </div>
         </div>
     </div>
-<div class="top-card"><div class="role" contenteditable="true" data-edit-index="167">Gestão e estratégia</div><div class="name" contenteditable="true" data-edit-index="168">Letícia</div><div class="dept" contenteditable="true" data-edit-index="169">Head de E-commerce · Estratégia, crescimento, performance e liderança do canal</div></div>
+<div class="top-card"><div class="role" contenteditable="true" data-edit-index="167">Gestão e estratégia</div><div class="name" contenteditable="true" data-edit-index="168">Letícia</div><div class="dept" contenteditable="true" data-edit-index="169">Performance e gestão do canal</div></div>
         <div class="cards-row projected">
             <div class="card management">
                 <div class="role" contenteditable="true" data-edit-index="170">Letícia</div>
-                <div class="name" contenteditable="true" data-edit-index="171">Head de E-commerce</div>
-                <div class="dept" contenteditable="true" data-edit-index="172">Estratégia, crescimento e gestão do canal</div>
+                <div class="name" contenteditable="true" data-edit-index="171">Head de&nbsp;<div contenteditable="true">E-commerce</div></div>
+                <div class="dept" contenteditable="true" data-edit-index="172">Estratégia, performance e gestão do canal</div>
                 <span class="badge alert" contenteditable="true" data-edit-index="173">Foco estratégico</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="174">Estratégico e gestão</li>
@@ -629,64 +711,64 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
                 </ul>
             </div>
             <div class="card crm">
-                <div class="role" contenteditable="true" data-edit-index="191">Analista de CRM</div>
-                <div class="name" contenteditable="true" data-edit-index="192">A contratar</div>
-                <div class="dept" contenteditable="true" data-edit-index="193">CRM, suporte do e-commerce e automações</div>
+                <div class="role" contenteditable="true" data-edit-index="191">Analista CRM</div>
+                <div class="name" contenteditable="true" data-edit-index="192">contrataR</div>
+                <div class="dept" contenteditable="true" data-edit-index="193"><div><br contenteditable="true"></div>Relacionamento&nbsp;&nbsp;<br contenteditable="true"><div><br contenteditable="true"></div></div>
                 <span class="badge hire" contenteditable="true" data-edit-index="194">Contratar agora</span>
                 <ul>
-                    <li contenteditable="true" data-edit-index="195">Planejamento de calendário CRM</li>
+                    <li contenteditable="true" data-edit-index="195" class="">Planejamento de calendário CRM</li>
                     <li contenteditable="true" data-edit-index="196">Briefing para execução de criativos</li>
                     <li contenteditable="true" data-edit-index="197">Disparos de e-mail e WhatsApp — programação</li>
                     <li contenteditable="true" data-edit-index="198">Segmentação de campanhas e clusters</li>
                     <li contenteditable="true" data-edit-index="199">Configuração de automações</li>
                     <li contenteditable="true" data-edit-index="200">Suporte quando necessário</li>
                     <li contenteditable="true" data-edit-index="201">Fechamento de CRM + app</li>
-                    <li contenteditable="true" data-edit-index="202">Revisão diária do site</li>
+                    <li contenteditable="true" data-edit-index="202" class="">Revisão diária do site<div><br contenteditable="true"></div><div contenteditable="true">*&nbsp; Preenchimento de suas micro-tarefas&nbsp;&nbsp;</div><div><br contenteditable="true"></div><div contenteditable="true">* Propor novas ações&nbsp;</div></li>
                 </ul>
             </div>
             <div class="card sales">
-                <div class="role" contenteditable="true" data-edit-index="203">Assistente de E-commerce</div>
-                <div class="name" contenteditable="true" data-edit-index="204">Inside Sales / Atendimento</div>
-                <div class="dept" contenteditable="true" data-edit-index="205">Venda ativa e atendimento digital</div>
-                <span class="badge hire" contenteditable="true" data-edit-index="206">Contratar agora</span>
+                <div class="role" contenteditable="true" data-edit-index="203">Assistente de&nbsp;<div contenteditable="true">E-commerce</div></div>
+                <div class="name" contenteditable="true" data-edit-index="204">Inside Sales</div>
+                <div class="dept" contenteditable="true" data-edit-index="205">Venda ativa e atendimento digital<div><br contenteditable="true"></div></div>
+                <span class="badge hire" contenteditable="true" data-edit-index="206">Contratar AGO/26</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="207">Atendimento dos canais digitais</li>
-                    <li contenteditable="true" data-edit-index="208">Venda ativa em cima da base clusterizada | campanhas e CRM</li>
-                    <li contenteditable="true" data-edit-index="209">Pedidos, trocas e financeiro operacional</li>
-                    <li contenteditable="true" data-edit-index="210">Alimentação de planilha de venda do dia — inside sales</li>
-                    <li contenteditable="true" data-edit-index="211">Fechamento de atendimento — mês + app</li>
+                    <li contenteditable="true" data-edit-index="208" class="">Venda ativa em cima da base clusterizada&nbsp;<div><br contenteditable="true"></div><div contenteditable="true">* Venda ativa em cima de campanhas&nbsp;</div><div><br contenteditable="true"></div><div contenteditable="true">* Venda ativa em cima de oportunidades&nbsp;</div><div><br contenteditable="true"></div><div contenteditable="true">*Venda ativa em cima de carrinho abandonado&nbsp;</div></li>
+                    <li contenteditable="true" data-edit-index="209" class="">Pedidos, trocas e financeiro operacional</li>
+                    <li contenteditable="true" data-edit-index="210" class="">Alimentação de planilha de venda do dia e mês</li>
+                    <li contenteditable="true" data-edit-index="211" class="">Fechamento de vendas: mensal + app<div><br contenteditable="true"></div><div contenteditable="true">* Kpis de vendas&nbsp;</div></li>
                     <li contenteditable="true" data-edit-index="212">Revisão de comentários</li>
                 </ul>
             </div>
             <div class="card creative">
                 <div class="role" contenteditable="true" data-edit-index="213">Designer</div>
-                <div class="name" contenteditable="true" data-edit-index="214">Analista de Criativos · Isa</div>
-                <div class="dept" contenteditable="true" data-edit-index="215">Produção visual, site e comunidade</div>
+                <div class="name" contenteditable="true" data-edit-index="214">WEB DESIGNER&nbsp;</div>
+                <div class="dept" contenteditable="true" data-edit-index="215">Produção visual, site e comunidade<div><br contenteditable="true"></div><div><br contenteditable="true"></div></div>
                 <span class="badge " contenteditable="true" data-edit-index="216">Cargo existente</span>
                 <ul>
-                    <li contenteditable="true" data-edit-index="217">Troca do site: atualizar banners, vitrines e links</li>
+                    <li contenteditable="true" data-edit-index="217" class="">&nbsp;Agenda semanal - MKT e ECOM</li>
                     <li contenteditable="true" data-edit-index="218">Banners</li>
                     <li contenteditable="true" data-edit-index="219">Anúncios</li>
                     <li contenteditable="true" data-edit-index="220">E-mail marketing</li>
                     <li contenteditable="true" data-edit-index="221">VM do site</li>
-                    <li contenteditable="true" data-edit-index="222">Disparo das ações e comunidade</li>
+                    <li contenteditable="true" data-edit-index="222" class="">Ações para comunidade. grupos e canal&nbsp;</li>
                     <li contenteditable="true" data-edit-index="223">Regra de desconto</li>
-                    <li contenteditable="true" data-edit-index="224">Landing pages</li>
+                    <li contenteditable="true" data-edit-index="224" class="">Landing pages e Aplicativos<div><br contenteditable="true"><div><div contenteditable="true">* Propor novas ações&nbsp;</div><div><br contenteditable="true"></div><div contenteditable="true">* Pesquisa de tendências e análise de mercado&nbsp;</div><div><br contenteditable="true"></div><div contenteditable="true">* Preenchimento de suas micro-tarefas&nbsp;</div></div></div><div><br contenteditable="true"></div><div contenteditable="true">* Atualizações do site: atualizar banners, vitrines e links</div></li>
                 </ul>
             </div>
             <div class="card ops">
-                <div class="role" contenteditable="true" data-edit-index="225">Assistente de E-commerce</div>
-                <div class="name" contenteditable="true" data-edit-index="226">Processos · Thay</div>
-                <div class="dept" contenteditable="true" data-edit-index="227">Operação, marketplace e processos</div>
-                <span class="badge " contenteditable="true" data-edit-index="228">Cargo existente</span>
+                <div class="role" contenteditable="true" data-edit-index="225">Assistente de&nbsp;<div contenteditable="true">E-commerce</div></div>
+                <div class="name" contenteditable="true" data-edit-index="226">Processo</div>
+                <div class="dept" contenteditable="true" data-edit-index="227"><div><br contenteditable="true"></div>Operação&nbsp;<div><br contenteditable="true"></div><div><br contenteditable="true"></div><div><br contenteditable="true"></div></div>
+                <span class="badge" contenteditable="true" data-edit-index="228">Cargo existente</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="229">Reposição de estoque</li>
                     <li contenteditable="true" data-edit-index="230">Suporte</li>
                     <li contenteditable="true" data-edit-index="231">Auxílio em demandas administrativas</li>
                     <li contenteditable="true" data-edit-index="232">VM do site</li>
                     <li contenteditable="true" data-edit-index="233">Vínculo marketplace</li>
-                    <li contenteditable="true" data-edit-index="234">Seleções</li>
-                    <li contenteditable="true" data-edit-index="235">Alimentação de planilha de venda do dia</li>
+                    <li contenteditable="true" data-edit-index="234" class="">Seleções para campanhas&nbsp;</li>
+                    <li contenteditable="true" data-edit-index="235" class="">Alimentação de conteúdo no e-commerce&nbsp;</li>
                     <li contenteditable="true" data-edit-index="236">Cadastro de produtos em marketplace</li>
                     <li contenteditable="true" data-edit-index="237">Cadastro de produtos e-commerce</li>
                     <li contenteditable="true" data-edit-index="238">Erros em pedidos, NFs etc.</li>
@@ -695,9 +777,9 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
                 </ul>
             </div>
             <div class="card data">
-                <div class="role" contenteditable="true" data-edit-index="241">Analista de E-commerce</div>
-                <div class="name" contenteditable="true" data-edit-index="242">Dados e Marketplaces</div>
-                <div class="dept" contenteditable="true" data-edit-index="243">Dados, giro e performance</div>
+                <div class="role" contenteditable="true" data-edit-index="241">Analista de&nbsp;<div contenteditable="true">E-commerce</div></div>
+                <div class="name" contenteditable="true" data-edit-index="242">Dados e Market-<div contenteditable="true">placeS</div></div>
+                <div class="dept" contenteditable="true" data-edit-index="243">Dados, marketplace<div><br contenteditable="true"></div></div>
                 <span class="badge plan" contenteditable="true" data-edit-index="244">Contratar jan/27</span>
                 <ul>
                     <li contenteditable="true" data-edit-index="245">Análise de dados do e-commerce</li>
@@ -707,17 +789,39 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
                     <li contenteditable="true" data-edit-index="249">Marketplace atual e novos</li>
                     <li contenteditable="true" data-edit-index="250">Captura e preenchimento de dados</li>
                     <li contenteditable="true" data-edit-index="251">Atualização e devoluções de marketplace</li>
-                    <li contenteditable="true" data-edit-index="252">Tabelas e atualizações de transporte</li>
+                    <li contenteditable="true" data-edit-index="252" class="">Tabelas e atualizações de transporte<div><br></div><div>* Suporte grau maior de dificuldade</div></li>
                 </ul>
             </div>
         </div>
     </section>
     <div class="impact">
-        <div class="impact-card" contenteditable="true" data-edit-index="253"><span contenteditable="true" data-edit-index="254">Estrutura proposta</span><strong contenteditable="true" data-edit-index="255">R$ 8 MM</strong><p class="subtitle" contenteditable="true" data-edit-index="256">Meta projetada 2027</p></div>
-        <div class="impact-card" contenteditable="true" data-edit-index="257"><span contenteditable="true" data-edit-index="258">Potencial otimista</span><strong contenteditable="true" data-edit-index="259">R$ 9 MM</strong><p class="subtitle" contenteditable="true" data-edit-index="260">Com equipe, CRM e vendas ativas estruturadas</p></div>
-        <div class="impact-card" contenteditable="true" data-edit-index="261"><span contenteditable="true" data-edit-index="262">Incremento esperado</span><strong contenteditable="true" data-edit-index="263">+ R$ 1,3 MM</strong><p class="subtitle" contenteditable="true" data-edit-index="264">Potencial adicional vs. capacidade atual</p></div>
+        <div class="impact-card" contenteditable="true" data-edit-index="253"><span contenteditable="true" data-edit-index="254">Estrutura proposta</span><strong contenteditable="true" data-edit-index="255" class="">R$ 8 MM</strong><p class="subtitle" contenteditable="true" data-edit-index="256">Meta projetada 2027</p></div>
+        <div class="impact-card" contenteditable="true" data-edit-index="257"><span contenteditable="true" data-edit-index="258" class="">Potencial otimista</span><strong contenteditable="true" data-edit-index="259">R$ 9 MM</strong><p class="subtitle" contenteditable="true" data-edit-index="260">Com crescimento acelerado e evolução da operação e redes sociais&nbsp;</p></div>
+        <div class="impact-card" contenteditable="true" data-edit-index="261"><span contenteditable="true" data-edit-index="262">Incremento esperado</span><strong contenteditable="true" data-edit-index="263" class="">+ R$ 1,2 MM</strong><p class="subtitle" contenteditable="true" data-edit-index="264">Potencial adicional para 2027</p></div>
     </div>
     <div class="note" contenteditable="true" data-edit-index="265">Resumo executivo: a proposta não é apenas aumentar equipe, mas reorganizar responsabilidades para liberar a gestão para estratégia, ampliar a capacidade de CRM e vendas ativas, reduzir gargalos operacionais e sustentar o crescimento projetado para 2027.</div>
+
+    <div class="cronograma-estrutura">
+        <h3 contenteditable="true" data-edit-index="900" class="">Cronograma de Evolução da Estrutura</h3>
+        <p contenteditable="true" data-edit-index="901">Plano gradual de contratações, priorizando as frentes com maior impacto em receita, retenção e sustentação do crescimento projetado para 2027.</p>
+        <div class="cronograma-grid">
+            <div class="cronograma-head" contenteditable="true" data-edit-index="902">Período</div>
+            <div class="cronograma-head" contenteditable="true" data-edit-index="903">Contratação</div>
+            <div class="cronograma-head" contenteditable="true" data-edit-index="904">Objetivo</div>
+
+            <div class="cronograma-cell periodo" contenteditable="true" data-edit-index="905"><strong contenteditable="true">Imediato (2026)</strong></div>
+            <div class="cronograma-cell contratacao" contenteditable="true" data-edit-index="906"><strong contenteditable="true">Analista de CRM</strong></div>
+            <div class="cronograma-cell objetivo" contenteditable="true" data-edit-index="907">Estruturar CRM, ampliar personalização, automações, campanhas segmentadas e apoiar a geração de receita através da base atual. Processo de recrutamento já em andamento.</div>
+
+            <div class="cronograma-cell periodo" contenteditable="true" data-edit-index="908"><strong contenteditable="true">Agosto/2026</strong></div>
+            <div class="cronograma-cell contratacao" contenteditable="true" data-edit-index="909"><strong contenteditable="true">Inside Sales</strong></div>
+            <div class="cronograma-cell objetivo" contenteditable="true" data-edit-index="910">Garantir treinamento, integração com CRM e maturação da operação para atuar com máxima eficiência durante a Black Friday e demais campanhas do segundo semestre.</div>
+
+            <div class="cronograma-cell periodo" contenteditable="true" data-edit-index="911"><strong contenteditable="true">Janeiro/2027</strong></div>
+            <div class="cronograma-cell contratacao" contenteditable="true" data-edit-index="912"><strong contenteditable="true" class="">Analista de E-COMMERCE</strong></div>
+            <div class="cronograma-cell objetivo" contenteditable="true" data-edit-index="913">Contratação condicionada ao retorno da Ana Carolina após licença maternidade. Caso não haja retorno, a posição absorve as frentes de análise de dados, inteligência comercial e expansão de marketplaces.</div>
+        </div>
+    </div>
 </section>
 <section id="redistribuicao" class="section">
     <div class="section-title"><div><div class="label" contenteditable="true" data-edit-index="266">03 · Responsabilidades</div><h2 contenteditable="true" data-edit-index="267">Redistribuição das atividades</h2></div><p contenteditable="true" data-edit-index="268">Visão das tarefas que permanecem na gestão e das atividades que devem ser redistribuídas para a nova estrutura.</p></div>
@@ -863,7 +967,7 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
                 <tr>
                     <td contenteditable="true" data-edit-index="380">Alinhamento de ações a cada ação/lançamento</td>
                     <td contenteditable="true" data-edit-index="381"><span class="status do" contenteditable="true" data-edit-index="382">Fazer</span></td>
-                    <td contenteditable="true" data-edit-index="383">Apresentação mensal das ações do mês seguinte, com revisão na quinzena.</td>
+                    <td contenteditable="true" data-edit-index="383" class="">Apresentação mensal das ações do mês seguinte, com revisão na quinzena.</td>
                 </tr>
                 <tr>
                     <td contenteditable="true" data-edit-index="384">Planejamento de tarefas</td>
@@ -991,5 +1095,6 @@ ul{padding-top:13px}li{font-size:10.5px;line-height:1.42;margin-bottom:6.5px;col
   load();
 })();
 </script>
-</body>
-</html>
+
+
+<div id="capture_chrome" data-v-app=""><div data-v-ac6fd69d="" class="wrap"></div><!----></div><div id="thunderbit-crx-side-bar" style="display:block;opacity:1;pointer-events:all;top:0;right:0;z-index:9007199254740991;position:fixed;pointer-events:none;user-select:none;"><template shadowrootmode="open"><div id="#react-app-root"><div id="#react-app-slot" style="display:flex;direction:ltr;text-align:left;unicode-bidi:isolate;font-family:Helvetica,&#39;Helvetica Neue&#39;,Arial,sans-serif,&#39;PingFang SC&#39;,&#39;Microsoft Yahei&#39;,&#39;Hiragino Sans GB&#39;,&#39;-apple-system&#39;,&#39;Inter&#39;;font-size:14px;line-height:normal;"></div></div></template></div><button id="open-side-panel" style="width:0;height:0;opacity:0;user-select:none;pointer-events:all;position:absolute;bottom:0;right:0;padding:0;border:0;outline:none;"></button></body></html>
